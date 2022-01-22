@@ -1,13 +1,13 @@
 public class GiantAnt extends Monster{
-	boolean venom;
+	boolean poison;
 	boolean wings;
 	
 	public GiantAnt(String name, String type, int hp, int atk, double atkSpd, int def, boolean venom, boolean wings) {
 		super(name, type, hp, atk, atkSpd, def);
-		this.venom = venom;
+		this.poison = venom;
 		this.wings = wings;
 		
-		if(this.venom) {
+		if(this.poison) {
 			this.atk *= 1.25;
 		}
 		
@@ -16,13 +16,13 @@ public class GiantAnt extends Monster{
 		}
 	}
 	
-	public boolean isVenom() {
-		return venom;
+	public boolean isPoison() {
+		return poison;
 	}
 	
-	public void setVenomt(boolean venom) {
-		this.venom = venom;
-		if(venom) {
+	public void setPoison(boolean poison) {
+		this.poison = poison;
+		if(poison) {
 			atk *= 1.25;
 		}
 	}
